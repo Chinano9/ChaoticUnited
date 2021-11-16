@@ -1,0 +1,75 @@
+:root{
+    --background: #fafafa;
+    --foreground: #2c3e50;
+}
+
+.upper{
+    background-color: rgb(85, 115, 248);
+}
+
+.title{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1 b{
+    color: var(--background);
+}
+
+h4.advice{
+    text-align: center;
+    border-radius: 5px;
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 60px;
+    margin-right: 40px;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #f5f5f5;
+    background-color: #ff1b22;
+}
+
+.sub-text{
+    color: white;
+    font-weight: 600;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.title img{
+    width: 100px;
+}
+
+main .container-fluid{
+    background-color: var(--background);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+h3.header{
+    font-size: 30px;
+    color: var(--foreground);
+    margin-bottom: 20px;
+}
+
+h3.header img{
+    width: 30px;
+    margin-right: 10px;
+}
