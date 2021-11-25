@@ -5,9 +5,9 @@ $(document).ready(() => {
     $('.nombre').css('background-color', 'rgb(85,115,248)');
     $('.nombre').css('text-align', 'center');
     $('.nombre').css('margin', '0');
-    if ($('.nombre').hasClass('saludo')){
-            $('.nombre').show(3000);
-        }
+    if ($('.nombre').hasClass('saludo')) {
+        $('.nombre').show(3000);
+    }
 });
 
 $('.nombre').click(() => {
@@ -18,3 +18,6 @@ function mover_a() {
     location.href = 'https://google.com';
 }
 
+function phpath() {
+    location.href = 'forms.php';
+}
