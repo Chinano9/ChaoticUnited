@@ -61,7 +61,7 @@ $row = mysqli_fetch_array($query);
                         <input required class="form-control" type="password" name="password" id="password" placeholder="Contraseña">
                         <label for="password">Contraseña</label>
                     </div>
-                    <input type="submit" value="Register">
+                    <input type="submit" value="Register" class="btn btn-dark">
                 </form>
             </div>
             <div class="col-md-9">
@@ -75,9 +75,18 @@ $row = mysqli_fetch_array($query);
                             <th scope="col">Grupo</th>
                             <th scope="col">Email</th>
                             <th scope="col">Comentarios</th>
+                            <th scope="col" colspan="2">
+                            <form action="phpres/db_search.php" method="POST">
+                                <div class="form-floating mb-2">
+                                    <input required class="form-control" type="text" name="id" id="id" placeholder="Matricula">
+                                    <label for="id">Matricula</label>
+                                </div>
+                                <input type="submit" value="Buscar" class="btn btn-dark">
+</form>
+                            </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="user_table">
                         <?php
                         do {
                             echo "<tr>";
@@ -88,11 +97,12 @@ $row = mysqli_fetch_array($query);
                             echo "<td>" . $row['user_group'] . "</td>";
                             echo "<td>" . $row['user_email'] . "</td>";
                             echo "<td>" . $row['user_comment'] . "</td>";
-                            echo "<td><a href='phpres/db_update.php?id=".$row['id_user']."' class='btn btn-dark'>Editar</a></td>";
-                            echo "<td><a href='phpres/db_delete.php?id=".$row['id_user']."' class='btn btn-danger'>Borrar</a></td>";
+                            echo "<td><a href='phpres/db_update.php?id=" . $row['id_user'] . "' class='btn btn-primary'>Editar</a></td>";
+                            echo "<td><a href='phpres/db_delete.php?id=" . $row['id_user'] . "' class='btn btn-danger'>Borrar</a></td>";
                             echo "</tr>";
                         } while ($row = mysqli_fetch_array($query));
                         ?>
+                    </tbody>
             </div>
         </div>
     </div>
